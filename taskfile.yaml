@@ -5,7 +5,7 @@ tasks:
       - task --list-all
   flash:
     cmds:
-      - tinygo flash -target=esp32s3-generic -serial=usb -port=COM6 .
+      - tinygo flash -monitor -target=esp32s3-generic -serial=usb -port=COM6 .
   monitor:
     cmds:
       - tinygo monitor -target=esp32s3-generic -serial=usb -port=COM6

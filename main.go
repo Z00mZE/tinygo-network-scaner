@@ -3,37 +3,48 @@ package main
 import (
 	"time"
 
-	"tinygo.org/x/espradio"
+	"tinygo.org/x/bluetooth"
 )
 
 func main() {
-	time.Sleep(2 * time.Second)
-	println("Initializing Wi-Fi...")
-	if err := espradio.Enable(espradio.Config{}); err != nil {
-		println("Enable error:", err.Error())
-		return
-	}
+	//println("Initializing Wi-Fi...")
+	//if err := espradio.Enable(espradio.Config{}); err != nil {
+	//	println("Enable error:", err.Error())
+	//	return
+	//}
 
-	if err := espradio.Start(); err != nil {
+	time.Sleep(2 * time.Second)
+	println(`BLE...`)
+	adapter := bluetooth.DefaultAdapter
+	if err := adapter.Enable(); err != nil {
 		println("Start error:", err.Error())
 		return
 	}
+	println("adapter.Enable(): true")
 
-	for {
-		println()
-		println("Scanning Wi-Fi...")
+	if scanError := adapter.Scan(bleScanResult); scanError != nil {
+		println("Scan error:", scanError.Error())
+	}
+	//println()
+	//println("Scanning Wi-Fi...")
+	//
+	//for {
+	//	aps, err := espradio.Scan()
+	//	if err != nil {
+	//		println("Scan error:", err.Error())
+	//	} else {
+	//		println("Found:", len(aps))
+	//		for _, ap := range aps {
+	//			println("SSID:", ap.SSID, "| RSSI:", ap.RSSI, "dBm")
+	//		}
+	//	}
+	//	break
+	//}
 
-		aps, err := espradio.Scan()
-		if err != nil {
-			println("Scan error:", err.Error())
-		} else {
-			println("Found:", len(aps))
+}
 
-			for _, ap := range aps {
-				println("SSID:", ap.SSID, "| RSSI:", ap.RSSI, "dBm")
-			}
-		}
-
-		time.Sleep(5 * time.Second)
+func bleScanResult(_ *bluetooth.Adapter, result bluetooth.ScanResult) {
+	if result.LocalName() != "" {
+		println("name:", result.LocalName(), "; RSSI:", result.RSSI, "; Addr: :", result.Address.String())
 	}
 }
