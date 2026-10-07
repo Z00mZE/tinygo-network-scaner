@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="TinyGoPlugin">
+    <option name="gc" value="conservative" />
+    <option name="goArch" value="arm" />
+    <option name="goOS" value="linux" />
+    <option name="goTags" value="xtensa baremetal linux arm esp32s3 esp espradio esp32s3_generic tinygo purego osusergo math_big_pure_go gc.conservative scheduler.tasks serial.usb tinygo.unicore" />
+    <option name="scheduler" value="tasks" />
+    <option name="targetPlatform" value="esp32s3-generic" />
+  </component>
+</project>
