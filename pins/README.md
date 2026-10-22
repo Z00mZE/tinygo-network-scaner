@@ -1,0 +1,1 @@
+WiFi: pigtail U.FL / IPEX1
