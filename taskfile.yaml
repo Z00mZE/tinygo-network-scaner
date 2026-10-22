@@ -1,0 +1,14 @@
+version: '3'
+tasks:
+  default:
+    cmds:
+      - task --list-all
+  flash:
+    cmds:
+      - tinygo flash -target=esp32s3-generic -serial=usb -port=COM6 .
+  flash-and-monitor:
+    cmds:
+      - tinygo flash -monitor -target=esp32s3-generic -serial=usb -port=COM6 .
+  monitor:
+    cmds:
+      - tinygo monitor -target=esp32s3-generic -serial=usb -port=COM6

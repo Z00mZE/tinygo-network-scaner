@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="TinyGo Monitor" type="TaskRunConfiguration" factoryName="TaskRunConfiguration">
+    <taskfile taskPath="C:\ProgramData\chocolatey\bin\task.exe" filename="D:\projects\tinygo-network-scaner\taskfile.yaml" task="monitor" workingDirectory="D:\projects\tinygo-network-scaner" arguments="" pty="true">
+      <envs />
+      <vars />
+    </taskfile>
+    <method v="2" />
+  </configuration>
+</component>

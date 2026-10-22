@@ -1,0 +1,8 @@
+github.com/axellse/tdisplays3-tinygo v0.0.0-20261008215350-10e451fd2c2a h1:VEiXM3p2FwDdZh9d3untzUVAR9iBsVuF04EvO56t6dc=
+github.com/axellse/tdisplays3-tinygo v0.0.0-20261008215350-10e451fd2c2a/go.mod h1:QOJDcXMN6bG+jlix4w3jM3gJ2V68kzD5hPGhJcDdtko=
+github.com/google/shlex v0.0.0-20191202100458-e7afc7fbc510 h1:El6M4kTTCOh6aBiKaUGG7oYTSPP8MxqL4YI3kZKwcP4=
+github.com/google/shlex v0.0.0-20191202100458-e7afc7fbc510/go.mod h1:pupxD2MaaD3pAXIBCelhxNneeOaAeabZDe5s4K6zSpQ=
+tinygo.org/x/drivers v0.36.0 h1:F0x342A6GWqh6abtCa57uAxCyz/b9MbGzvIVvIf+gpE=
+tinygo.org/x/drivers v0.36.0/go.mod h1:DQgKyHkB4G6IEOKVTAjApbKnWGwESN91EVJO+nMOE9Y=
+tinygo.org/x/tinyfont v0.6.0 h1:GibXDSFz6xrWnEDkDRo6vsbOyRw0MVj/eza3zNHMSHs=
+tinygo.org/x/tinyfont v0.6.0/go.mod h1:onflMSkpWl7r7j4MIqhPEVV39pn7yL4N3MOePl3G+G8=
